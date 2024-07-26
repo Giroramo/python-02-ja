@@ -1,6 +1,6 @@
 def mystery_function(lst):
-    result = lst
+    result = lst.copy()  # 元のリストをコピーして変更を行う
     for i in range(len(lst)):
-        if i % 2 == 0:
-            result[i] = i ** 2
+        if lst[i] % 2 == 0:  # 偶数の要素をチェック
+            result[i] = lst[i] ** 2  # 偶数の要素を二乗
     return result
